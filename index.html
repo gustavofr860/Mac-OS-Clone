@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac OS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="top_bar">
+        <div class="app_menu">
+            <img class = "top_icon" src="./icons/pngwing.com.png" alt="" >
+            <p class="top_text" id="bold">
+            Reminders
+            </p>
+            <p class="top_text">
+            File
+            </p>
+            <p class="top_text">
+            Edit
+            </p>
+            <p class="top_text">
+            View
+            </p>
+            <p class="top_text">
+                Window
+            </p>
+            <p class="top_text">
+                Help
+            </p>
+        </div>
+
+        <div class="utility_menu">
+            <img src="./icons/pngegg.png" alt="" class="top_utility" style="filter: invert(100%);">
+            <img src="./icons/pngegg (2).png" alt="" class="top_utility" style="filter: invert(100%);">
+            <img src="./icons/pngegg (1).png" alt="" class="top_utility" style="filter: invert(100%);">
+            <img src="./icons/control centre.png" alt="" class="top_utility" style="height: 90%;">
+            <p class="utility_text" id="currentDateTime"></p>
+        </div>
+    </div>
+
+<div class="dock_holder">
+        <div class="dock">
+            <div class="icons">
+                <img class="icon" src="./icons/Finder_Icon_macOS_Big_Sur.png " alt="">
+                <img class = "icon" src="./icons/Johanchalibert-Mac-Osx-Yosemite-Launchpad.512.png" alt="">
+                <img class = "icon" src="./icons/calendar.png" alt="">
+                <img class = "icon" src="./icons/spotify_dark_macos_bigsur_icon_189701.png" alt="">
+                <img class = "icon" src="./icons/notion_alt_macos_bigsur_icon_189899.png" alt="">
+                <img class = "icon" src="./icons/google_chrome_macos_bigsur_icon_190133.png" alt="">
+                <img class = "icon" src="./icons/discord_alt_macos_bigsur_icon_190236.png" alt="">
+                <img class = "icon" src="./icons/roblox_alt_macos_bigsur_icon_189774.png" alt="">
+                <img class = "icon" src="./icons/github_alt_macos_bigsur_icon_190138.png" alt="">
+                <img class = "icon" src="./icons/Recycle_Bin_Full_23081.png" alt="">
+        </div>
+    </div>
+</body>
+
+<script>
+    function updateDateTime() {
+    const now = new Date();
+    const options = { 
+        weekday: 'short',   
+        year: 'numeric',    
+        month: 'short',     
+        day: 'numeric',    
+        hour: '2-digit', 
+        minute: '2-digit'   
+    };
+    const dateTimeString = now.toLocaleString(undefined, options); 
+    document.getElementById('currentDateTime').textContent = dateTimeString;
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
+
+</script>
+
+
+</html>

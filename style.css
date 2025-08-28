@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+}
+
+body{
+    overflow: hidden;
+    background-image: url('./wallpapers/big_sur.jpg');
+    background-size: cover;
+}
+
+
+.icon{
+    height: 8vh;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+
+.dock{
+  backdrop-filter: blur(70px);
+  border-radius: 20px;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+
+.icons{
+  gap: 0.2vw;
+  justify-content: center;
+  display: flex;
+  height: 80vh;
+  padding: 1vh 1vw 0 1vw;
+}
+
+.dock_holder{
+  margin-top: 83vh;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+}
+
+.icon:hover{
+  height: 18vh;
+  transform: translateY(-13vh)
+}
+
+.icon:hover + .icon{
+  height: 14vh;
+  transform: translateY(-8vh);
+}
+
+.icon:hover + .icon + .icon{
+  height: 12vh;
+  transform: translateY(-4vh);
+}
+
+.icon:has(+ .icon:hover){
+  height: 14vh;
+  transform: translateY(-8vh);
+}
+
+.icon:has(+ .icon + .icon:hover){
+  height: 12vh;
+  transform: translateY(-4vh);
+}
+
+/* TOP BAR */
+
+.top_icon{
+  cursor: pointer;
+  height: 70%;
+  transform: translateY(-0.5vh);
+}
+
+.top_bar{
+  gap: 40vw;
+  backdrop-filter: blur(40px);
+  background-color: rgba(0, 0, 0, 0.61);
+  height: 5vh;
+  display: flex;
+}
+
+.top_text{
+  cursor: pointer;
+}
+
+.top_text:hover{
+  font-weight: 1000;
+}
+
+.app_menu{
+  display: flex;
+  gap: 2vw;
+  color: white;
+  align-items: center;
+  font-family: Roboto;
+}
+
+#bold{
+  font-weight: bold;
+}
+
+.utility_menu{
+  gap: 1vw;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.top_utility{
+  height: 55%;
+}
+
+.utility_text{
+  font-family: Roboto;
+  color: white;
+}
